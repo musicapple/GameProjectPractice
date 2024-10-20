@@ -2,16 +2,14 @@ package org.jaker.game.entity;
 
 public interface Entity {
 
-    String getDisplayName();
+    String getName();
+
+    void setHp(double hp);
 
     double getHp();
 
-    void setHp(double hp);   // hp조정
+    boolean hasGravity();
 
-    double getMoventmentSpeed();
-
-    void setSpeed(double speed);    // speed 조정
-
-
+    void setGravity();
 
 }
