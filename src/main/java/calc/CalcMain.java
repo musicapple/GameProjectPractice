@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class CalcMain {
 
-    public static String eval;
+    public static String eval;  //
+    public static String x;
 
     public static void main(String[] args) {
 
@@ -16,13 +17,13 @@ public class CalcMain {
                 if(eval == null){
                     throw new IllegalStateException("error");
                 }
-                newEval = eval;
+                x = eval; // 이전식 현재식에 대입
+            }else{
+                eval = x;   // 현재식을 이전식에 저장
+                x =  newEval;   // 입력받은 식을 현재식에 저장
             }
-            if(eval!=null)
-            eval = newEval;
-
-            System.out.println("eval: "+eval);
-            System.out.println("newEval: "+newEval);
+            System.out.println("이전식: "+eval);
+            System.out.println("현재식: "+x);
         }
     }
 }
