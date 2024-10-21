@@ -11,6 +11,7 @@ public class CalcMain {
 
         Scanner sc = new Scanner(System.in);
 
+
         while(true){
             String newEval = sc.next();
             if(newEval.equals("undo")){
